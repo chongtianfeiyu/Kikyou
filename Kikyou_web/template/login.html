@@ -1,0 +1,40 @@
+﻿{% extends "base.html" %}
+
+{% block navigator %}
+{% endblock %}
+{% block content %}
+
+<div style="width:1600px;">
+<form class="form-horizontal" role="form" action="/login" method="get" onSubmit="return validate_form(this)">
+  <div class="form-group" >
+    <label for="username" class="col-sm-2 control-label">用户名</label>
+    <div class="col-sm-2" >
+      <input type="text" class="form-control" id="username" name="username" placeholder="Username">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="inputPassword3" class="col-sm-2 control-label">密码</label>
+    <div class="col-sm-2">
+      <input type="password" class="form-control" id="password" name="password" placeholder="Password">
+    </div>
+  </div>
+  <div class="form-group" >
+    <div class="col-sm-offset-2 col-sm-10" >
+      <div class="checkbox">
+        <label>
+          <input type="checkbox"> 记住我
+        </label>
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10" >
+      <button type="submit" class="btn btn-default" >登录</button>
+      {% if error %}
+      	<font color="red">{{ error }}</font>
+      {% endif %}
+    </div>
+  </div>
+</form>
+</div>
+{% endblock %}

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<main>
+
+<storage>http://d5.dawx.net/app100688853/sgonline083001/assets/</storage>
+<cdnroot>http://d5.dawx.net/app100688853/sgonline</cdnroot>
+<feedpic>http://d5.dawx.net/app100688853/sgonline083001/assets/</feedpic>
+
+<stats>http://app30970.t.qzoneapp.com/report</stats>
+				
+<reportserver>http://report.app100688853.twsapp.com/cgi-bin/sgqhPostReport.cgi</reportserver>
+<reportpercent>100</reportpercent>
+<reportwhitelist>,7005826,</reportwhitelist>
+
+<resource>
+<material id="main" size="1721612" text="load_res_2_tips" type="endata" url="http://d5.dawx.net/app100688853/sgonline15012004/swf_new/GameStub.swf.new" />
+<material size="2243419" text="load_res_2_tips" url="http://d5.dawx.net/app100688853/sgonline15012002/swf_new/giftui.swf" />
+<material size="1642783" text="load_res_2_tips" url="http://d5.dawx.net/app100688853/sgonline15012002/swf_new/zhuui2.swf" />
+<material size="683203" text="load_res_2_tips" url="http://d5.dawx.net/app100688853/sgonline14091902/swf_new/vipui.swf" />
+<material size="640000" text="load_res_2_tips" url="http://d5.dawx.net/app100688853/sgonline14072401/swf_new/giftboxui.swf" />
+<material size="1178414" text="load_res_2_tips" url="http://d5.dawx.net/app100688853/sgonline14121901/swf_new/baseui.swf" />
+<material size="940710" text="load_res_2_tips" url="http://d5.dawx.net/app100688853/sgonline14091902/swf_new/xinshouui.swf" />
+<material size="670638" text="load_res_2_tips" url="http://d5.dawx.net/app100688853/sgonline14122404/swf_new/buildingui.swf" />
+<material size="1262878" text="load_res_2_tips" url="http://d5.dawx.net/app100688853/sgonline14082202/swf_new/jiuguanui.swf" />
+
+<material bin="bin" id="all" size="399739" text="load_res_2_tips" type="endata" url="http://d5.dawx.net/app100688853/sgonline15012002/xml/all.bin.new" />
+<material bin="bin" id="test" size="1174274" text="load_res_2_tips" type="endata" url="http://d5.dawx.net/app100688853/sgonline15012002/xml/test.bin.new" />
+
+</resource>      
+<sounds>
+<sound url="http://d5.dawx.net/app100688853/sgonline14072401/swf_new/sounds.swf" />
+</sounds>
+ 
+</main>

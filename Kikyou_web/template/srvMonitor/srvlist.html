@@ -1,0 +1,35 @@
+﻿{% extends "base.html" %}
+
+{% block content %}
+{% if srvlist %}
+
+<div class="table-responsive">
+    <table class="table table-bordered table-striped">
+      <colgroup>
+        <col class="col-xs-1">
+        <col class="col-xs-7">
+      </colgroup>
+      <thead>
+        <tr>
+          <th> srv name </th>
+          <th> ip vlan </th>
+		  <th> purchase_date </th>
+        </tr>
+      </thead>
+      <tbody>
+	  {% for srv in srvlist %}
+        <tr>
+          <td> {{ srv.srv_name }} </td>
+          <td>{{ srv.ip_vlan }} </td>
+		  <td>{{ srv.purchase_date }} </td>
+        </tr>
+	  {% endfor %}
+      </tbody>
+    </table>
+</div>
+{% else %}
+	<p> There is no data <p/>
+ 
+{% endif %}
+  
+{% endblock %}

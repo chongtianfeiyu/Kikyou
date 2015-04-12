@@ -1,0 +1,162 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--  腾讯云css样式
+    <link href="//qzonestyle.gtimg.cn/open_proj/proj_cloud_platform/cloud_platform.css" rel="stylesheet" media="screen" />
+    -->
+    <title>Kikyou</title>
+
+    <!-- Bootstrap -->
+    <link href="../media/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+	    function validate_required(field,alerttxt)
+	    {
+	    with (field)
+	      {
+	      if (value==null||value=="")
+	        {alert(alerttxt);return false}
+	      else {return true}
+	      }
+	    }
+	
+	    function validate_vid(thisform)
+	    {
+	    with (thisform)
+	      {
+	      if (validate_required(vid,"版本号不能为空！")==false)
+	        {vid.focus();return false}
+	      }
+	    }
+	    
+	    function validate_days(thisform)
+	    {
+	    with (thisform)
+	      {
+	      if (validate_required(days,"天数不能为空！")==false)
+	        {days.focus();return false}
+	      }
+	    }
+    </script>
+  </head>
+  <body>
+
+  {% block navigator %}
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Kikyou</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Link</a></li>
+        
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">前台版本发布 <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="/versionstart/?game=sgonline_v5">第五款前台版本制作</a></li>
+            <li><a href="/versionstart/?game=sgonline_v10">第十款前台版本制作</a></li>
+            <li><a href="/versionstart/?game=sgwar_enus">战争霸业英文版</a></li>
+            <li><a href="/versionstart/?game=sgwar_zhtw">战争霸业繁体版</a></li>
+          </ul>
+        </li>
+        
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">服务器状态 <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="/tmpstatus/">各服务器最新状态</a></li>
+            <li><a href="/srvstatus/">各服务器历史状态记录</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+            <li class="divider"></li>
+            <li><a href="#">One more separated link</a></li>
+          </ul>
+        </li>
+        
+		<!--li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">各款区服 <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">城防三国国内版</a></li>
+            <li><a href="#">战争霸业</a></li>
+            <li><a href="#">城防三国FB英文版</a></li>
+            <li><a href="#">城防三国FB中文版</a></li>
+            <li><a href="#">城防三国FB联运版</a></li>
+            <li><a href="#">城防三国台湾版</a></li>
+            <li class="divider"></li>
+            <li><a href="#">海底消消</a></li>
+            <li><a href="#">凹凸三国</a></li>
+            <li class="divider"></li>
+            <li><a href="#">打飞机</a></li>
+          </ul>
+        </li-->
+      </ul>
+      <form class="navbar-form navbar-left" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Link</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="/logout/">注销登录</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+  
+  {% endblock %}
+
+  {% block content %}
+  <!-- content of body -->
+  {% endblock %}
+
+  {% block footer %}
+ <footer class="footer ">
+  <div class="container">
+    
+    <hr/>
+    <div class="row footer-bottom">
+      <ul class="list-inline text-center">
+        <li><a href="#" target="_blank">淘趣网络运维组</a></li><li>copyright @ www.dawx.com</li>
+      </ul>
+    </div>
+  </div>
+</footer>
+	
+  {% endblock %}
+  </body>
+  
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../media/js/bootstrap.min.js"></script>
+	
+</html>

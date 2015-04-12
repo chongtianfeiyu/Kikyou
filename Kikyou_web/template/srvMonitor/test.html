@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+	{% for s in student_dict %}
+		{% ifchanged s %}
+		{% else %}
+			it is the same number:
+		{% endifchanged %}
+		{{ s }} <br>
+	{% empty %}	
+		sorry, there is no student name in list
+	{% endfor %}
+	
+	{% if student_dict %}
+		{{ student_dict|length }}
+	{% endif %}
+	
+	{% regroup cities by country as country_list %}
+
+	<ul>
+		{% for country in country_list %}
+		    <li>{{ country.grouper }}
+		    <ul>
+		        {% for item in country.list %}
+		          <li>{{ item.name }}: {{ item.population }}</li>
+		        {% endfor %}
+		    </ul>
+		    </li>
+		{% endfor %}
+	</ul>	
+	{{ user }}
+</body>
+</html>

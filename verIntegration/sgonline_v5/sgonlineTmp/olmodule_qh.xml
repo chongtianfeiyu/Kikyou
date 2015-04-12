@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<content>
+
+<module name="huodongui">
+<item><![CDATA[{"url":"14072401/swf_new/huodongui.swf", "type":"swf"}]]></item>
+<depend>["hero"]</depend>
+</module>
+<module name="formationEntrance">  <!--国战-->
+<item><![CDATA[{"url":"14072401/swf_new/zhenfaui.swf", "type":"swf"}]]></item>
+<item><![CDATA[{"url":"14072401/swf_new/nationalWarrgtMap.swf", "type":"swf"}]]></item>
+</module>
+
+<module name="jiuguan">
+<item><![CDATA[{"url":"14082202/swf_new/jiuguanui.swf", "type":"swf"}]]></item>
+<item><![CDATA[{"url":"14121901/swf_new/skillui.swf", "type":"swf"}]]></item>
+</module>
+
+<module name="hero">
+<item><![CDATA[{"url":"14072402/swf_new/wjui.swf", "type":"swf"}]]></item>
+<depend>["skill","smith"]</depend>
+</module>
+
+<module name="tutor">  <!--新手教程-->
+<item><![CDATA[{"url":"14091902/swf_new/xinshouui.swf", "type":"swf"}]]></item>
+<depend>[ "jiuguan"]</depend>
+</module>
+
+<module name="barrack">  <!--兵营/没兵处/研究院-->
+<item><![CDATA[{"url":"14072401/swf_new/barracksui.swf", "type":"swf"}]]></item>
+<depend>["smith"]</depend>
+</module>
+
+<module name="skill">  <!--技能-->
+<item><![CDATA[{"url":"14121901/swf_new/skillui.swf", "type":"swf"}]]></item>
+<depend>["shop"]</depend>
+</module>
+
+<module name="p2pbattle">  <!--战报，讨论-->
+<item><![CDATA[{"url":"15010803/swf_new/attackui.swf", "type":"swf"}]]></item>
+</module>
+
+
+<module name="worldboss">  <!--世界BOSS-->
+<item><![CDATA[{"url":"14072401/swf_new/worldbossui.swf", "type":"swf"}]]></item>
+</module>
+
+
+<module name="email">  <!--邮件系统-->
+<item><![CDATA[{"url":"14101001/swf_new/emailui.swf", "type":"swf"}]]></item>
+</module>
+
+
+<module name="friend">  <!--社交模块，好友-->
+<item><![CDATA[{"url":"14082801/swf_new/friendui.swf", "type":"swf"}]]></item>
+</module>
+
+<module name="bunker">  <!--伏兵处/驿站-->
+ <item><![CDATA[{"url":"14072401/swf_new/bunkerui.swf", "type":"swf"}]]></item>
+ <depend>["hero","smith","skill"]</depend>
+</module>
+
+<module name="reward">  <!--朝贡-->
+<item><![CDATA[{"url":"14081901/swf_new/rewardui.swf", "type":"swf"}]]></item>
+</module>
+
+<module name="smith">  <!--装备、铁匠-->
+ <item><![CDATA[{"url":"14122501/swf_new/equip.swf", "type":"swf"}]]></item>
+ <depend>["shop","hero","skill"]</depend>
+</module>
+
+<module name="shop">  <!--背包和商店-->
+ <item><![CDATA[{"url":"14122404/swf_new/shopui.swf?v=2.0", "type":"swf"}]]></item>
+ <depend>["smith","hero","skill"]</depend>
+</module>
+
+<module name="building">  <!--建筑管理界面-->
+<item><![CDATA[{"url":"14122404/swf_new/buildingui.swf", "type":"swf"}]]></item>
+</module>
+
+<module name="battle">  <!--通用战斗所需资源-->
+<item><![CDATA[{"url":"14072401/swf_new/bulletui.swf", "type":"swf"}]]></item>
+<item><![CDATA[{"url":"14072401/swf_new/battleui.swf", "type":"swf"}]]></item>
+<depend>["skill"]</depend>
+</module>
+
+<module name="choujiang">  <!--抽奖界面-->
+<item><![CDATA[{"url":"14072401/swf_new/choujiangui.swf?v=1.1", "type":"swf"}]]></item>
+<depend>["smith"]</depend>
+</module>
+
+<module name="common">  <!--通用界面-->
+<item><![CDATA[{"url":"14102404/swf_new/commonui.swf", "type":"swf"}]]></item>
+</module>
+
+<module name="story">  <!--剧情-->
+<item><![CDATA[{"url":"14072401/swf_new/plotui.swf", "type":"swf"}]]></item>
+</module>
+
+<module name="gate">  <!--闯关-->
+<item><![CDATA[{"url":"14081403/swf_new/mixelworldsui.swf", "type":"swf"}]]></item>
+</module>
+
+
+<module name="pray">  <!--祈福-->
+<item><![CDATA[{"url":"14072401/swf_new/prayUi.swf", "type":"swf"}]]></item>
+</module>
+
+<module name="arena">   <!--擂台-->
+<item><![CDATA[{"url":"14072401/swf_new/jingjiui.swf", "type":"swf"}]]></item>
+</module>
+
+<module name="task">  <!--任务-->
+<item><![CDATA[{"url":"14081403/swf_new/taskui.swf", "type":"swf"}]]></item>
+</module>
+
+<module name="medal">  <!--勋章-->
+<item><![CDATA[{"url":"14072401/swf_new/honorui.swf", "type":"swf"}]]></item>
+</module>
+
+<module name="worldmap">  <!--世界地图-->
+<item><![CDATA[{"url":"14072401/swf_new/map2.swf", "type":"swf"}]]></item>
+</module>
+
+<module name="coalitionui">  <!--联盟-->
+<item><![CDATA[{"url":"14072401/swf_new/coalitionui.swf?v=1.1", "type":"swf"}]]></item>
+</module>
+<module name="gatewin">  <!--联盟-->
+<item><![CDATA[{"url":"14072401/swf_new/winui.swf?v=1.1", "type":"swf"}]]></item>
+</module>
+<module name="gatelose">  <!--联盟-->
+<item><![CDATA[{"url":"14072401/swf_new/lostui.swf?v=1.1", "type":"swf"}]]></item>
+</module>
+<module name="gift">  <!--礼包-->
+<item><![CDATA[{"url":"15010803/swf_new/giftui.swf", "type":"swf"}]]></item>
+</module>
+
+<module name="martialui">  <!--武林大会-->
+<item><![CDATA[{"url":"15011501/swf_new/martialui.swf?v=1.1", "type":"swf"}]]></item>
+</module>
+
+<module name="gmui">  <!--gm-->
+<item><![CDATA[{"url":"14072401/swf_new/gmui.swf?v=1.1", "type":"swf"}]]></item>
+</module>
+<module name="todayChallenge">  <!--今日挑战-->
+<item><![CDATA[{"url":"15010803/swf_new/shenbingui.swf", "type":"swf"}]]></item>
+<item><![CDATA[{"url":"14121901/swf_new/skillui.swf", "type":"swf"}]]></item>
+<item><![CDATA[{"url":"14121901/swf_new/tipsui.swf", "type":"swf"}]]></item>
+</module>
+
+<module name="team">  <!--联合副本-->
+	<item><![CDATA[{"url":"14072401/swf_new/teambattleui.swf", "type":"swf"}]]></item>
+</module>
+
+<module name="godfb">  <!--神兵副本-->
+	<item><![CDATA[{"url":"15011501/swf_new/swjui.swf", "type":"swf"}]]></item>
+</module>
+<module name="mapeffect1">  <!--神兵副本-->
+	<item><![CDATA[{"url":"14072401/swf_new/river.swf", "type":"swf"}]]></item>
+</module>
+<module name="boats">  <!--草船借箭-->
+	<item><![CDATA[{"url":"14091902/swf_new/boatui.swf", "type":"swf"}]]></item>
+</module>
+<module name="point">  <!--限时积分-->
+	<item><![CDATA[{"url":"14092601/swf_new/integralui.swf", "type":"swf"}]]></item>
+</module>
+<module name="bossrush">  <!--传记-->
+	<item><![CDATA[{"url":"14072401/swf_new/zjui.swf", "type":"swf"}]]></item>
+	<item><![CDATA[{"url":"14081403/swf_new/mixelworldsui.swf", "type":"swf"}]]></item>
+	<item><![CDATA[{"url":"14072401/swf_new/manzuui.swf", "type":"swf"}]]></item>
+</module>
+<module name="crossserver">  <!--跨服武林大会-->
+	<item><![CDATA[{"url":"15011501/swf_new/zhengbaui.swf", "type":"swf"}]]></item>
+	<item><![CDATA[{"url":"15011501/swf_new/martialui.swf?v=1.1", "type":"swf"}]]></item>
+</module>
+<module name="partpower">  <!--武魂系统-->
+	<item><![CDATA[{"url":"15011901/swf_new/wuhunui.swf", "type":"swf"}]]></item>	
+</module>
+<module name="duanwu">  <!--端午活动-->
+	<item><![CDATA[{"url":"14072401/swf_new/duanwuui.swf", "type":"swf"}]]></item>	
+</module>
+<module name="herosoul">  <!--将灵系统-->
+	<item><![CDATA[{"url":"14072401/swf_new/jianglingui.swf", "type":"swf"}]]></item>	
+</module>
+<module name="fund">  <!--基金系统-->
+	<item><![CDATA[{"url":"14122602/swf_new/jijinui.swf", "type":"swf"}]]></item>	
+</module>
+<module name="shenqi">  <!--神器-->
+	<item><![CDATA[{"url":"14072401/swf_new/shenqiui.swf", "type":"swf"}]]></item>	
+</module>
+
+
+<module name="shortcut">  <!--快速链接-->
+	<item><![CDATA[{"url":"14080101/swf_new/qianwangui.swf", "type":"swf"}]]></item>	
+</module>
+
+
+<module name="allianceboss">  <!--gm-->
+<item><![CDATA[{"url":"14072401/swf_new/banghuiui.swf?v=1.1", "type":"swf"}]]></item>
+</module>
+
+<module name="tuangou">  <!--gm-->
+<item><![CDATA[{"url":"14101001/swf_new/qqyingyong.swf?v=1.1", "type":"swf"}]]></item>
+</module>
+
+<module name="kingdom">  <!--国家-->
+<item><![CDATA[{"url":"14072401/swf_new/guojiaui.swf?v=1.1", "type":"swf"}]]></item>
+</module>
+
+<module name="qqyy">  <!--QQ应用面板-->
+<item><![CDATA[{"url":"14101001/swf_new/qqyingyong.swf?v=1.1", "type":"swf"}]]></item>
+</module>
+
+<module name="chou">  <!--抽奖游戏-->
+<item><![CDATA[{"url":"14090401/swf_new/choujianghd.swf?v=1.1", "type":"swf"}]]></item>
+</module>
+
+<module name="share"> <!--大厅分享-->
+<item><![CDATA[{"url":"14072401/swf_new/fenxiangui.swf?v=1.1", "type":"swf"}]]></item>
+</module>
+
+<module name="soul">
+<item><![CDATA[{"url":"15011901/swf_new/wuhunui.swf", "type":"swf"}]]></item>
+</module>
+
+<module name="zhen">
+<item><![CDATA[{"url":"14072401/swf_new/zhenfaui.swf", "type":"swf"}]]></item>
+</module>
+
+<module name="chongzhi">
+<item><![CDATA[{"url":"14072601/swf_new/chongzhiui.swf", "type":"swf"}]]></item>
+</module>
+
+<module name="mystic">
+<item><![CDATA[{"url":"14082801/swf_new/wujiangbuy.swf", "type":"swf"}]]></item>
+<item><![CDATA[{"url":"14121901/swf_new/skillui.swf", "type":"swf"}]]></item>
+</module>
+
+<module name="weixin"> <!--微信-->
+<item><![CDATA[{"url":"14072401/swf_new/weixinui.swf", "type":"swf"}]]></item>
+</module>
+
+<module name="doujiang"> <!--斗将阵型-->
+<item><![CDATA[{"url":"14072401/swf_new/wjdjui.swf", "type":"swf"}]]></item>
+</module>
+
+<module name="wujianghun"> <!--名将谱-->
+<item><![CDATA[{"url":"14072401/swf_new/wjhunui.swf", "type":"swf"}]]></item>
+</module>
+
+<module name="xunlian"> <!--培养训练-->
+<item><![CDATA[{"url":"14080801/swf_new/wjxlui.swf", "type":"swf"}]]></item>
+<item><![CDATA[{"url":"14121901/swf_new/skillui.swf", "type":"swf"}]]></item>
+</module>
+
+<module name="meirizhenbao"> <!--步步为赢-->
+<item><![CDATA[{"url":"14072401/swf_new/meirizhenbao.swf", "type":"swf"}]]></item>
+</module>
+
+<module name="huoyue"> <!--活跃豪礼活动预告-->
+<item><![CDATA[{"url":"14072401/swf_new/huoyueui.swf", "type":"swf"}]]></item>
+</module>
+
+<module name="nanman"> <!--南蛮-->
+<item><![CDATA[{"url":"14072401/swf_new/manzuui.swf", "type":"swf"}]]></item>
+</module>
+
+<module name="putian"> <!--普天同庆-->
+<item><![CDATA[{"url":"14072401/swf_new/putianui.swf", "type":"swf"}]]></item>
+</module>
+
+<module name="dinglulibao"><!-- 登陆礼包 -->
+<item><![CDATA[{"url":"14101001/swf_new/qqyingyong.swf", "type":"swf"}]]></item>
+</module>
+<module name="chibid"><!-- 赤壁争霸 -->
+		<item><![CDATA[{"url":"14112503/swf_new/chibizhizhanui.swf", "type":"swf"}]]></item>
+</module>
+<module name="mimaui"><!-- 密码设置 -->
+		<item><![CDATA[{"url":"14072401/swf_new/mimaui.swf", "type":"swf"}]]></item>
+</module>
+<module name="lanzuanui"><!-- 蓝钻礼包 -->
+		<item><![CDATA[{"url":"14072501/swf_new/lanzuanui.swf", "type":"swf"}]]></item>
+		<depend>["skill"]</depend>
+</module>
+<module name="cutprice"><!-- 疯狂放价 -->
+		<item><![CDATA[{"url":"14072401/swf_new/fengkuangfangjiaui.swf", "type":"swf"}]]></item>
+</module>
+<module name="wuhujiangui"><!-- 五虎将 -->
+		<item><![CDATA[{"url":"14072401/swf_new/wuhujiangui.swf", "type":"swf"}]]></item>
+</module>
+<module name="juexueui"><!-- 绝学系统 -->
+		<item><![CDATA[{"url":"14072401/swf_new/juexueui.swf", "type":"swf"}]]></item>
+</module>
+<module name="gumutanbaoui"><!-- 古墓探宝 -->
+		<item><![CDATA[{"url":"14072401/swf_new/gumutanbaoui.swf", "type":"swf"}]]></item>
+</module>
+<module name="happycardui"><!-- 欢乐卡牌 -->
+		<item><![CDATA[{"url":"14072401/swf_new/happycardui.swf", "type":"swf"}]]></item>
+</module>
+<module name="guanzhi"><!-- 官职系统 -->
+		<item><![CDATA[{"url":"14072401/swf_new/guanzhixitongui.swf", "type":"swf"}]]></item>
+</module>
+<module name="qirijijinui"><!-- 七日基金 -->
+		<item><![CDATA[{"url":"14091902/swf_new/qirijijinui.swf", "type":"swf"}]]></item>
+</module>
+<module name="duanweisai"><!-- 段位赛 -->
+		<item><![CDATA[{"url":"14121102/swf_new/duanweixunzhangsaiui.swf", "type":"swf"}]]></item>
+</module>
+<module name="hefuui"><!-- 合区活动 -->
+		<item><![CDATA[{"url":"14120506/swf_new/hefuui.swf", "type":"swf"}]]></item>
+</module>
+<module name="kuangshanui"><!-- 挖矿活动 -->
+		<item><![CDATA[{"url":"14080702/swf_new/kuangshanui.swf", "type":"swf"}]]></item>
+</module>
+<module name="kuangshanui"><!-- 挖矿活动 -->
+		<item><![CDATA[{"url":"14080702/swf_new/kuangshanui.swf", "type":"swf"}]]></item>
+</module>
+<module name="zhongqiuui"><!-- 中秋活动 -->
+		<item><![CDATA[{"url":"14102701/swf_new/zhongqiuui.swf", "type":"swf"}]]></item>
+</module>
+<module name="zhenbaogeui"><!-- 珍宝阁 -->
+		<item><![CDATA[{"url":"14090501/swf_new/zhenbaogeui.swf", "type":"swf"}]]></item>
+</module>
+<module name="newWorld"><!-- 国战 -->
+		<item><![CDATA[{"url":"14112702/swf_new/newWorld.swf", "type":"swf"}]]></item>
+</module>
+<module name="dianjiang"><!-- 点将台 -->
+		<item><![CDATA[{"url":"14101001/swf_new/wujianghuixueui.swf", "type":"swf"}]]></item>
+</module>
+<module name="guozhanui"><!-- 国战guozhanui.swf -->
+		<item><![CDATA[{"url":"14121102/swf_new/guozhanui.swf", "type":"swf"}]]></item>
+</module>
+<module name="mirror"><!-- 镜像挑战 -->
+		<item><![CDATA[{"url":"15011501/swf_new/jingxiangtiaozhan.swf", "type":"swf"}]]></item>
+		<item><![CDATA[{"url":"14121901/swf_new/skillui.swf", "type":"swf"}]]></item>
+		<item><![CDATA[{"url":"14121901/swf_new/tipsui.swf", "type":"swf"}]]></item>
+</module>
+<module name="linshi"><!-- 临时强化活动 -->
+		<item><![CDATA[{"url":"14112001/swf_new/qianghuajinjieui.swf", "type":"swf"}]]></item>
+</module>
+<module name="wjxuanzhe"><!-- 国战wjxuanzhe.swf -->
+		<item><![CDATA[{"url":"14110601/swf_new/wjxuanzhe.swf", "type":"swf"}]]></item>
+</module>
+<module name="chengshi"><!-- 国战chengshi.swf -->
+		<item><![CDATA[{"url":"14112601/swf_new/chengshi.swf", "type":"swf"}]]></item>
+</module>
+<module name="tujin"><!-- 国战tujin.swf -->
+		<item><![CDATA[{"url":"14110601/swf_new/tujin.swf", "type":"swf"}]]></item>
+</module>
+<module name="qimendunjia"><!-- 奇门遁甲 -->
+		<item><![CDATA[{"url":"15010803/swf_new/qimendunjia.swf", "type":"swf"}]]></item>
+		<item><![CDATA[{"url":"14121901/swf_new/skillui.swf", "type":"swf"}]]></item>
+		<item><![CDATA[{"url":"14121901/swf_new/tipsui.swf", "type":"swf"}]]></item>
+</module>
+<module name="dantiao"><!-- 国战dantiao.swf -->
+		<item><![CDATA[{"url":"14111304/swf_new/dantiao.swf", "type":"swf"}]]></item>
+</module>
+<module name="huodongzhongxin"><!-- 新活动面板.swf -->
+		<item><![CDATA[{"url":"14120506/swf_new/huodongzhongxin.swf", "type":"swf"}]]></item>		
+</module>
+<module name="duanweimodeset"><!-- 段位战斗模式设置将领.swf -->
+		<item><![CDATA[{"url":"14121102/swf_new/duanweimodeset.swf", "type":"swf"}]]></item>		
+</module>
+<module name="baibao"><!-- 圣诞活动 -->
+		<item><![CDATA[{"url":"14121901/swf_new/baibaoxiang.swf", "type":"swf"}]]></item>		
+</module>
+<module name="huanlezadan"><!-- 圣诞活动2 -->
+		<item><![CDATA[{"url":"14122404/swf_new/huanlezadan.swf", "type":"swf"}]]></item>		
+</module>
+<module name="christmas"><!-- 圣诞活动2 -->
+		<item><![CDATA[{"url":"14122502/swf_new/shengdanhuodong.swf", "type":"swf"}]]></item>		
+</module>
+
+<module name="yuandanhuodong"><!-- 元旦活动 -->
+		<item><![CDATA[{"url":"14122404/swf_new/yuandanhuodong.swf", "type":"swf"}]]></item>		
+</module>
+
+<module name="dunjiajinjie"><!-- 临时兵书遁甲 -->
+		<item><![CDATA[{"url":"15011501/swf_new/dunjiajinjie.swf", "type":"swf"}]]></item>		
+</module>
+<module name="zhaohuanhaoyou"><!-- 召唤好友 -->
+		<item><![CDATA[{"url":"15011501/swf_new/zhaohuanhaoyou.swf", "type":"swf"}]]></item>		
+</module>
+<module name="jifenduihuan"><!-- 积分兑换 -->
+		<item><![CDATA[{"url":"15012101/swf_new/jifenduihuan.swf", "type":"swf"}]]></item>		
+</module>
+</content>

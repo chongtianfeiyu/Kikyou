@@ -1,0 +1,16 @@
+{% extends "verIntegration/versionTmp.html" %}
+
+{% block version_content %} 
+
+{% if message %}
+	{% for m in message %}
+		{{ m }}<br>
+	{% endfor %}
+{% endif %}
+<!--  下面部分打印上一步回显的数据，包括执行错误代码 -->
+{% if errorlist %}
+	{% for error in errorlist %}
+    	{{ error }}<br>
+    {% endfor %}
+{% endif %}
+{% endblock %}

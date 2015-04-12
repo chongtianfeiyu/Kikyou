@@ -1,0 +1,123 @@
+1. 环境部署
+服务器环境centos6.2 64bit
+数据库服务器：mysql5.5.30
+Python：Python 2.6.6
+Django：Django-1.4.16
+pexpect: pexpect-2.3
+nginx: nginx-1.5.7
+uwsgi: uwsgi-2.0.8
+详细部署：http://www.cnblogs.com/forilen/p/4242052.html
+
+2. 代码架构
+root@192.168.100.252:/data/release/Kikyou# tree -L 2
+.
+├── docs	#开发说明文档
+│?? ├── aim.txt
+│?? └── Kikyou.sql
+├── Kikyou_web	#
+│?? ├── hello.py
+│?? ├── Kikyou.conf		#Kikyou配置文件
+│?? ├── Kikyou_web		#
+│?? ├── logs
+│?? ├── manage.py
+│?? ├── media			#静态资源目录
+│?? ├── nohup.out		#启动uwsgi日志目录
+│?? ├── pexpect			#pexpect示例代码
+│?? ├── runserver.sh	#调试程序启动脚本
+│?? ├── runuwsgi.sh		#uwsgi启动脚本
+│?? ├── srvMonitor		#服务器管理模块代码
+│?? ├── template		#网页模版
+│?? ├── test.py
+│?? ├── test.pyc
+│?? └── verIntegration	#版本发布代码目录
+├── logs				#远端服务器执行脚本错误日志
+│?? ├── 192.168.100.250.log
+│?? ├── 192.168.100.252.log
+│?? └── db.data
+├── scripts				#脚本目录
+│?? ├── chkalert.py
+│?? ├── clearup.sh
+│?? ├── run_django.sh
+│?? └── srvStatus.sh
+└── verIntegration		#各款发布版本生成的版本文件
+    ├── sgonline_v10
+    ├── sgonline_v5
+    ├── sgwar_enus
+    └── sgwar_zhtw
+
+verIntegration/sgonline_v10
+├── api.php					#上传资源到蓝汛预分发脚本
+├── autoUpLoadZsbyPre.sh	#上传资源到网宿脚本
+├── ftp.txt
+├── olmodule_war2.xml
+├── pre_publish.txt
+├── rsync				#rsync传资源到蓝汛目录
+├── stderr_log			#版本发布错误日志
+└── stdout_log			#版本发布日志
+
+Kikyou.conf配置文件解析，配置文件为字典格式，默认按照第五款格式执行。
+"sgonline_v5":{"name":"城防三国",		#项目名
+             "ip":"192.168.100.254",	#内网资源服务器ip
+             "user":"root",				#登录用户名
+             "password":"dawx@99",		#登录密码
+             "port":"56000",			#登录端口
+             "remote_dir":"/data/release/htdocs/sgonline",		#远端资源所在路径
+             "local_dir":"/data/release/Kikyou/verIntegration/sgonline_v5",		#本地版本保存目录
+             "tmp_dir":"sgonlineTmp",	#样本版本保存目录
+             "ini_xml":"ini.xml",		#版本中ini.xml文件名
+             "xml_dir_name":"xml_newnew",	#远端xml配置保存目录
+             "remote_swf_dir_name":"swf_new",	#远端swf资源保存目录
+             "local_swf_dir_name":"swf_new",	#版本本地swf资源保存目录
+             "work_dir_head":"sgonline",		#版本本地保存版本文件的目录头
+             "olmodule_name":"olmodule_qh.xml",	#远端olmodule文件名
+             "remote_i18n_dir_name":"I18N",		#远端语言包保存目录
+             "zh_cn_name":"zh_cn_qh.xml.new",	#远端语言包加密后文件名
+             "urlhead":"http://d5.dawx.net/app100688853",	#项目资源url头
+             "cdn_head":"d5.dawx@61.135.206.20::d5.dawx.net/app100688853/",		#蓝汛cdn资源服务器路径
+             "encrypt_sh":"qh_encrypt.sh",		#远端加密脚本
+             "remote_bak_dir":"/data/forilen/disversion/xml_bak"	#版本库远端备份路径
+             },
+"svn_admin":"forilen",	#svn执行者用户名
+"svn_admin_password":"ting"		#svn执行者密码
+
+
+3. 测试
+测试模式调用Kikyou_web/runserver.sh 启动debug模式
+测试版本代码在/data/forilen/Kikyou下
+正式版代码提交在svn服务器：svn://192.168.100.251/IT/Kikyou
+
+4. 远端服务器其他部署
+root@192.168.100.246:/data/forilen# tree sgonline_v10/ -L 2
+sgonline_v10/		#版本备份目录
+├── autoUpLoadZsbyPre.sh	#网宿上传脚本
+├── ftp.txt
+├── sgonline082501	#网宿图片上传目录
+│?? └── assets
+├── sgonline082501.zip
+├── sgonline082501.zip.MD5
+├── sgonline082501.zip.UNZIP
+└── xml_bak			#配置文件备份目录
+    ├── GameStub.swf.15032701		#GameStub.swf未加密版本备份
+    ├── GameStub.swf.15032702
+    ├── GameStub.swf.15032703
+    ├── GameStub.swf.15032704
+    ├── xml_15032701				#配置文件版本备份
+    ├── xml_15032702
+    ├── xml_15032703
+    ├── xml_15032704
+    └── xml_15032705
+
+root@192.168.100.246:/data/release/htdocs/sgwar# tree -L 1
+.
+├── assets		#图片资源保存目录
+├── I18N		#语言包目录
+├── qh_encrypt.sh	#swf资源加密脚本
+├── someassets		#图片资源加密后保存目录
+├── someassets.sh	#图片文件名加密脚本
+├── swf_new			#swf资源目录
+├── xml_newnew		#xml配置目录
+
+5. bug修补日志
+5.1 单发zhcn不加密和不执行svn更新操作
+5.2 修改olmodule混淆wjui.swf和swjui.swf的bug
+5.3 

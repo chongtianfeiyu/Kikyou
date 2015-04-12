@@ -1,0 +1,51 @@
+{% extends "verIntegration/versionTmp.html" %}
+
+{% block version_content %}
+<form action="/uiprepare/" onSubmit="return validate_vid(this)" method="get" >
+<table border="1" width="720">
+	<tr>
+		<td width="30%" align="center" bgcolor="#CCCC33">step1:UI准备</td>
+		<td width="70%" bgcolor="#CCCC33">选择需要发布的ui
+        </td>
+	</tr>	
+  <tr>
+		<td width="30%" align="center">版本号</td>
+		<td><input type="text" name="vid" size="10" height="20"> <font color="#FF0000" >*必填</font> 
+        {% if current_version %}
+        	当前最新版本号：{{ current_version }}
+        {% endif %}
+		</td>
+	</tr>
+	<tr>
+		<td width="30%" align="center">原始ini.xml路径</td>
+		<td><input name="iniurl" type="text" size="50" height="20">选填</td>
+	</tr>
+	<tr>
+		<td width="30%" align="center" valign="top" >选择ini.xml中需要发布的UI</td>
+		<td>
+			<input type="checkbox" name="ui_list" value="GameStub.swf.new" />GameStub.swf.new<br />
+			<input type="checkbox" name="ui_list" value="giftui.swf" />giftui.swf<br />
+			<input type="checkbox" name="ui_list" value="zhuui2.swf" />zhuui2.swf<br />
+			<input type="checkbox" name="ui_list" value="vipui.swf" />vipui.swf<br />
+			<input type="checkbox" name="ui_list" value="giftboxui.swf" />giftboxui.swf<br />
+			<input type="checkbox" name="ui_list" value="baseui.swf" />baseui.swf<br />
+			<input type="checkbox" name="ui_list" value="xinshouui.swf" />xinshouui.swf<br />
+			<input type="checkbox" name="ui_list" value="buildingui.swf" />buildingui.swf<br />
+			<input type="checkbox" name="ui_list" value="jiuguanui.swf" />jiuguanui.swf<br />
+			<input type="checkbox" name="ui_list" value="zhuui.swf" />zhuui.swf[军事版]<br />
+            <input type="checkbox" name="ui_list" value="buildinghitui.swf" />buildinghitui.swf[军事版]<br />
+            <input type="checkbox" name="ui_list" value="equip.swf" />equip.swf[军事版]<br />
+            <input type="checkbox" name="ui_list" value="tipsui.swf" />tipsui.swf[军事版]<br />
+		</td>
+	</tr>
+	<tr>
+		<td width="30%" align="center" valign="top">粘帖需要发布的其他所有UI的名字，每个文件名占一行</td>
+		<td><textarea rows="10" cols="40" id="newui" name="newui" ></textarea></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td align="center"><input type="submit" value="下一步" /></td>
+	</tr>
+</table>
+</form>
+{% endblock %}

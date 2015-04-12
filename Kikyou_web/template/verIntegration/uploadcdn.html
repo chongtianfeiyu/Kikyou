@@ -1,0 +1,36 @@
+{% extends "verIntegration/versionTmp.html" %}
+
+{% block version_content %}
+<form action="/uploadcdn/" onSubmit="return validate_form(this)" method="get" >
+<table border="1" width="720">
+	<tr>
+		<td align="center" bgcolor="#CCCC33">step3:上传CDN</td>
+		<td bgcolor="#CCCC33">请确认本次版本的文件内容,将以下资源发布到CDN</td>
+	</tr>
+	<tr>
+		<td align="center" >确认本次版本的内容</td>
+		<td align="left" >
+        {% if filelist %}
+        	{% for file in filelist %}
+            	{{ file }}<br>
+            {% endfor %}
+        {% endif %}
+        </td>
+	</tr>
+	<tr>
+		<td></td>
+		<td ><input type="submit" value="下一步" /></td>
+	</tr>
+</table>
+</form>
+<!--  下面部分打印上一步回显的数据，包括执行错误代码  -->
+{% if errorlist %}
+<font color="#FF0000">上一步执行错误信息：</font><br />
+<font color="#FF3300" >
+	{% for error in errorlist %}
+    	{{ error }}<br>
+    {% endfor %}
+</font>
+{% endif %}
+
+{% endblock %}

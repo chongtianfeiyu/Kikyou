@@ -1,0 +1,32 @@
+{% extends "verIntegration/versionTmp.html" %}
+
+{% block version_content %}
+<form action="/uploadpng/" onSubmit="return validate_days(this)" method="get" >
+<table border="1" width="720">
+	<tr>
+		<td align="center" bgcolor="#CCCC33">上传图片到cdn</td>
+		<td bgcolor="#CCCC33">请填写距服务器当前日期N天的图片</td>
+	</tr>
+  	<tr>
+		<td width="30%" align="center">天数</td>
+		<td><input type="text" name="days" size="10" height="20"> <font color="#FF0000" >*必填</font> </td>
+	</tr>
+	<tr>
+		<td></td>
+		<td ><input type="submit" value="开始上传" /></td>
+	</tr>
+</table>
+</form>
+
+<!--  下面部分打印上一步回显的数据，包括执行错误代码  -->
+{% if errorlist %}
+<font color="#FF0000">Error message：</font><br />
+<font color="#FF3300" >
+	{% for error in errorlist %}
+    	{{ error }}<br>
+    {% endfor %}
+</font>
+{% endif %}
+
+{% endblock %}
+

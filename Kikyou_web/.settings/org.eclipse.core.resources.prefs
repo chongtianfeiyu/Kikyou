@@ -1,0 +1,11 @@
+eclipse.preferences.version=1
+encoding//Kikyou_web/settings.py=utf-8
+encoding//pexpect/hive.py=utf-8
+encoding//pexpect/monitor.py=utf-8
+encoding//pexpect/script.py=utf-8
+encoding//srvMonitor/models.py=utf-8
+encoding//srvMonitor/views.py=utf-8
+encoding//verIntegration/integrate.py=utf-8
+encoding//verIntegration/tools.py=utf-8
+encoding//verIntegration/views.py=utf-8
+encoding/test.py=utf-8

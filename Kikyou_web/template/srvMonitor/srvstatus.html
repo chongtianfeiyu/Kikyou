@@ -1,0 +1,91 @@
+﻿{% extends "base.html" %}
+{% block content %}
+<!-- 显示单个服务器指定区间状态 -->
+{% if srvstatus %}
+
+<form role="form">
+
+<div class="btn-group">
+  <button type="button" class="btn btn-default">1</button>
+  <button type="button" class="btn btn-default">2</button>
+
+  <div class="btn-group">
+    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+      Dropdown
+      <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu" role="menu">
+      <li><a href="#">Dropdown link</a></li>
+      <li><a href="#">Dropdown link</a></li>
+    </ul>
+  </div>
+  <div class="btn-group">
+    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+      Dropdown
+      <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu" role="menu">
+      <li><a href="#">Dropdown link</a></li>
+      <li><a href="#">Dropdown link</a></li>
+    </ul>
+  </div>
+</div>
+
+<button type="submit" class="btn btn-default">Submit</button>
+</form>
+
+<div class="bs-example">
+    <table class="table">
+      <thead>
+        <tr class="success">
+          <th>ip地址</th>
+          <th>cpu-5</th>
+          <th>cpu-10</th>
+          <th>cpu-15</th>
+          <th>内存占用</th>
+          <th>tcp连接数</th>
+          <th>进网流量bytes/s</th>
+          <th>出网流量bytes/s</th>
+          <th>/使用%</th>
+          <th>/data使用%</th>
+          <th>/node使用%</th>
+          <th>/data node使用%</th>
+          <th>报警级别</th>
+          <th>服务器状态</th>
+          <th>时间戳</th>
+        </tr>
+      </thead>
+      <tbody>
+	  {% for item in srvstatus %}
+
+        <tr class="
+			{% ifnotequal item.alert_level 0 %}
+				{{ "danger" }}
+			{% endifnotequal %}		
+		">
+          <td>{{ item.ip_vlan }}</td>
+          <td>{{ item.cpu_load5 }}</td>
+          <td>{{ item.cpu_load10 }}</td>
+          <td>{{ item.cpu_load15 }}</td>
+          <td>{{ item.mem_used }}</td>
+          <td>{{ item.tcp_estab }}</td>
+          <td>{{ item.eth_in }}</td>
+          <td>{{ item.eth_out }}</td>
+          <td>{{ item.disk_used_root }}</td>
+          <td>{{ item.disk_used_data }}</td>
+          <td>{{ item.inode_used_root }}</td>
+          <td>{{ item.inode_used_data }}</td>
+          <td>{{ item.alert_level }}</td>
+          <td>{{ item.srv_status }}</td>
+          <td>{{ item.ts|date:"Y-m-d H:i:s"}}</td>
+        </tr>
+	  {% endfor %}
+      </tbody>
+    </table>
+  </div>
+{% else %}
+	<p> There is no data <p/>
+ 
+{% endif %}
+  
+{% endblock %}

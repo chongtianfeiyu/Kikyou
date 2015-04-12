@@ -1,0 +1,468 @@
+
+<!doctype html>
+<html><!--os_winXp,os_mac,os_vista,os_win7-->
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+	<meta name="Keywords" content="腾讯,社区,开放平台" />
+	<meta name="Description" content="腾讯开放平台,让天下没有埋没的才能！腾讯开放平台,不寂寞的平台！" />
+	<title>应用管理中心_腾讯开放平台 OPEN.QQ.COM</title>
+	<script type="text/javascript">
+	var timeStart = new Date();
+	document.domain = 'qq.com';
+	var CHILD = {"mobile_pay":"http:\/\/cpay.qq.com\/qqzone\/offer2m\/go\/100688853","managed":"http:\/\/ptlogin2.qq.com\/ho_cross_domain?tourl=http%3A%2F%2Fmanage.qcloud.com%2Fredirect.php%3Fu%3Dindex%26appId%3D100688853","data":"http:\/\/compass.qq.com\/reports?appid=100688853","pay":"http:\/\/cpay.qq.com\/qz\/go\/100688853","security":"http:\/\/guard.qq.com\/paySec\/o_app\/100688853","area":"http:\/\/wlop.ieodopen.qq.com\/?iAppId=100688853","center":"http:\/\/op.open.qq.com\/index.php?mod=appinfo&act=apppreview&appid=100688853","main":"http:\/\/op.open.qq.com\/index.php?mod=appinfo&act=basicinfo&appid=100688853","submitSys":"http:\/\/op.open.qq.com\/index.php?mod=appinfo&act=addRequestPage&appid=100688853","permit":"http:\/\/open.qq.com\/pms\/my_permit?owner=2383913068&appId=100688853"};
+	var G_Data = {
+		'allowMobilePay' : parseInt('1', 10),
+		'isOpenGame' : parseInt('0', 10)
+	};
+	</script>
+	<link href="http://ctc.qzonestyle.gtimg.cn/open_proj/open_platform_developer_reg_v2.css" rel="stylesheet" media="screen" />
+	<link href="http://ctc.qzonestyle.gtimg.cn/open_proj/open_platform_developer_reg_v2_founder.css" rel="stylesheet" media="screen" />
+	<link href="http://ctc.qzonestyle.gtimg.cn/open_proj/proj_open_v2/css/global/g_min.css" rel="stylesheet" media="screen" />
+	<link href="http://ctc.qzonestyle.gtimg.cn/open_proj/proj_open_v2/css/manager/founder_release.css" rel="stylesheet" media="screen" />
+	<link href="http://qzonestyle.gtimg.cn/open_proj/proj_open_v2/css/popup/open-pop-v2.css" type="text/css" rel="stylesheet" media="screen"/><!--MTA弹框样式-->
+	<style>
+		.gb_layer_box {
+			display: block;/*MTA弹框样式修复*/
+		}
+	</style>
+	<!--main/index.tpl 总览页-->
+</head>
+<body>
+<div class="open_platform_developer_reg page_app_basic_info_modify">
+<div class="g_header head" id="header_manage_center">
+	<div class="inner">
+		<h1 class="wireless_h" style="height:71px;overflow: visible;">
+			<a href="http://open.qq.com/" class="logo" title="腾讯开放平台">腾讯开放平台</a>
+			<span id="switchbox-panel" class="switch_box" style="height:auto;">
+				<i class="vertical_line"></i>
+				<a href="http://op.open.qq.com/" class="logo logo-upper logo3 current" rel="3">应用管理</a>
+			</span>
+		</h1>
+		<div id="header-extra-btn" class="extra-btn" style="display:none;">
+			
+				<a href="http://op.open.qq.com/index.php?mod=mobile_manage_center&act=tap_gdt&owner=2383913068#src=http%3A%2F%2Fe.qq.com%2Fatlas%2Fredirect%2Fmyapp%3Ffrom%3Dopen">广告投放</a>
+			
+		</div>
+		<div class="extra_op">
+			<p class="head_info">
+				<a href="http://open.qq.com/">首页</a>
+				<a href="http://wiki.open.qq.com/wiki/%E9%A6%96%E9%A1%B5" target="_blank">资料库</a>
+				<a href="http://open.qq.com/support" target="_blank">联系客服</a>
+				<a href="http://open.qq.com/reg" target="_blank" class="login j_login">
+					<span class="j_nick nick" style="word-wrap:normal;">1492947504</span>
+					<span class="arrow_down_placeholder"><b class="arrow_down"></b></span>
+				</a>
+				<a href="javascript:void(0);" class="logout j_logout" style="display:none;" onclick="try{V.login.exit('http://open.qq.com/');}catch(_){}return false;">退出</a>
+			</p>
+			
+			<a href="http://op.open.qq.com/?mod=sys_message" target="_blank" class="message">消息
+				
+			</a>
+			
+		</div>
+	</div>
+</div>
+<div class="body">
+	<div class="main">
+		<div class="mod_main_menu" id="lst_link">
+			<div>
+				<ul class="top_menu" id="nav_plat">
+					<script>
+						CHILD['fcm'] = "http://op.open.qq.com/index.php?mod=appinfo&act=fcm&owner=2383913068&appid=100688853";
+						function getUrlp(name) {var re = new RegExp('(?:\\?|#|&)' + name + '=([^&#]*)', 'i');var m = re.exec(window.location.href);return m ? m[1] : '';};
+						function curHash() { return (location.href.match(/#.*/)||[''])[0].slice(1); }
+						var o = 2383913068 , i = 100688853 , addr = getUrlp("addr") , t = getUrlp("tab") , h=curHash(), __subMenu=[], __mobile_subMenu=[],OP_INDEX_MOBILE_TAB=[];
+						var OP_INDEX_TAB = { center : 1,main : 1,managed : 1,area : 1,data : 1,pay : 1,security : 1,support : 1,adv : 1, permit : 1,submitSys: 1,fcm:1,mobile:1 };
+						var __hash_tab = h.split("|");
+						//先定义好这个function， 以免index_v2.js加载完之前， iframe内页调这个方法报错。
+						window.toMain = function(){};
+						window.toSubmitSys = function(){};
+						window.changeNav = function() {  window.changeNav.lastArgs = [].slice.call(arguments);  };
+						window.__isMobile = +"0";
+						window.__isPc = +"1";
+
+						if( __hash_tab[0] && OP_INDEX_TAB[__hash_tab[0]] ){
+							t = t || __hash_tab[0];
+						}
+						OP_INDEX_TAB = {
+							appManage : {
+								name : "应用管理",
+								ht : "OP.OPEN.APPMANAGEMENT",
+								sub : {
+									center : { ht : "OP.OPEN.HOME", ac : "center", name : "应用总览", cur : ( !t || "center" == t) ,  show : 10, dis : 0 },
+									main : { ht : "OP.OPEN.BASICINFO", ac : "main", name : "应用信息管理", cur : ("main" == t) , show : 10, dis : 0 },
+									permit : { ht : "OP.OPEN.AUTH", ac : "permit", name : "权限管理", cur : ("permit" == t) , show : 10, dis : 0 }
+								}
+							},
+							data : { ht : "OP.OPEN.REPORT", ac : "data", name : "业务数据", cur : ("data" == t) , show : 10, dis : 0 },
+							cloudService : {
+								name : "云服务管理",
+								ht : "OP.OPEN.CLOUDSERVICE",
+								sub : {
+								//	managed : { ht : "OP.OPEN.YUN", ac : "managed", name : "托管服务", cur : ("managed" == t) , show : 10, dis : 0 },
+									area : { ht : "OP.OPEN.DISTICT", ac : "area", name : "选区配置", cur : ("area" == t) , show : 10, dis : 0 },
+									security : { ht : "OP.OPEN.GUARD", ac : "security", name : "安全", cur : ("security" == t) , show : 10, dis : 0 }
+								}
+							},
+							pay : { ht : "OP.OPEN.CPAY", ac : "pay", name : "支付结算", cur : ("pay" == t) , show : 10, dis : 0 },
+							platformSupport : {
+								name : "平台支持",
+								ht : "OP.OPEN.PLATFORMSUPPORT",
+								sub : {
+									submitSys : { ht : "OP.OPEN.SUBMIT", ac : "submitSys", name : "需求系统", cur : ("submitSys" == t) ,  show : 10, dis : 0 },
+									fcm : { ht : "OP.OPEN.FCM", ac : "fcm", name : "防沉迷查询", cur : ("fcm" == t) ,  show : 0, dis : 0 }
+								}
+							}
+						};
+						function getToken() {
+							var str = (document.cookie||'').match(/(?:^|;)\s*skey=([^;]*)/)||["",""];
+							str = str[1];
+							var hash = 5381;
+							for (var i = 0, len = str.length; i < len; ++i) {
+								hash += (hash << 5) + str.charCodeAt(i);
+							}
+							return hash & 0x7fffffff;
+						};
+						var OPTREE = {
+							"main" : {
+								"basic":"mod=appinfo&act=basicinfo",
+								"icon":"mod=appinfo&act=showimg",
+								"ip":"mod=appinfo&act=showtrustip",
+								"debugger":"mod=appinfo&act=showdebugger",
+								"pf":"mod=appplatform&act=show",
+								"custom":"mod=appinfo&act=showcustom&g_tk="+getToken(),
+								"ag":"mod=appinfo&act=showagreementandcopyright",
+								"resource":"mod=appinfo&act=resource",
+								"agent":"mod=appagent&act=page",
+								"basic_m":"mod=tap_appinfo&act=page",
+								"icon_m":"mod=appinfo&act=showimg&apptype=mobile",
+								"pf_m":"mod=appplatform&act=show&apptype=mobile",
+								"ag_m":"mod=contractinfo&act=tap",
+								"links":"mod=appinfo&act=showextlinkinfo"
+							},
+							"submitSys" : {
+								"addRequest":"act=addRequestPage",
+								"reqDetail":"act=requestDetailPage",
+								"myAllRequest":"act=submitSysRequestList&type=myAll",
+								"myTodoRequest":"act=submitSysRequestList&type=myTodo",
+								"myDoneRequest":"act=submitSysRequestList&type=myDone",
+								"myProcessRequest":"act=submitSysRequestList&type=myProcess",
+								"appAllRequest":"act=submitSysRequestList&type=appAll",
+								"appTodoRequest":"act=submitSysRequestList&type=appTodo",
+								"appDoneRequest":"act=submitSysRequestList&type=appDone",
+								"appProcessRequest":"act=submitSysRequestList&type=appProcess"
+							},
+							"mobile":{
+								"baseInfo":"mod=mobile_appinfo&act=basicinfo", //&appid=1101343285&pf=201
+								"iconInfo":"mod=mobile_appinfo&act=icon",
+								"apkInfo":"mod=mobile_appinfo&act=apkinfo",
+								"platformInfo":"mod=mobile_appinfo&act=pfinfo",
+								"agreementInfo":"mod=mobile_appinfo&act=copyright",
+								"baseAbility":"mod=mobile_appinfo&act=base_ability",
+								"advancedAbility":"mod=mobile_appinfo&act=advanced_ability",
+								"relationAbility":"mod=mobile_appinfo&act=relation_ability",
+								"debut":"mod=tap_first_publish&act=page",//首发
+								"microDownload":"mod=mobile_appinfo&act=ability_iframe&type=micro_download",//微下载
+								"tapUpdate":"mod=mobile_appinfo&act=tap_update",//省流量更新
+								"swapFlow":"mod=mobile_appinfo&act=ability_iframe&type=swap_flow",//换量系统
+								"systemAbility":"mod=mobile_appinfo&act=system_ability",
+								"appStronger" : "mod=mobile_appinfo&act=ability_iframe&type=app_stronger",//应用加固
+								hongbaoInfo : 'mod=mobile_appinfo_operation&act=redgift_list_page',	//红包信息
+								'copyright'	: 'mod=mobile_appinfo&act=copyright_icon',
+								'activity'	: 'mod=mobile_appinfo_activity&act=page',
+								'LBSAbility':"mod=mobile_appinfo&act=ability_iframe&type=lbs" //LBS能力
+							},
+							fcm: {}
+						};
+						function getSubmitSysUrl(hash) {
+							hash = hash.replace(/^#/, '').replace(/^mobile\|/i, ''); // mobile|submitSys|...
+							var list = hash.split('|');
+							if ("submitSys" == list[0] && list[1] && OPTREE.submitSys[list[1]]) {
+								if("reqDetail" == list[1] ){
+									return "http://op.open.qq.com/index.php?mod=appinfo&"+OPTREE.submitSys['reqDetail']+"&owner="+o+"&appid="+i+"&orderId="+list[2];
+								} else {
+									return "http://op.open.qq.com/index.php?mod=appinfo&"+OPTREE.submitSys[list[1]]+"&owner="+o+"&appid="+i+"&!#"+list.slice(2).join("|");
+								}
+							}
+							return CHILD["submitSys"];
+						}
+						function getMobilePageCfg(hash) {
+							hash = hash.split('|');
+							if ( "center" == hash[1]) {
+								url = CHILD[ "center" ];
+								tab = "mobile_center";
+							} else if( "submitSys" == hash[1]) {//mobile|submitSys
+								url = getSubmitSysUrl(h);
+								tab = "mobile_submitSys";
+							} else if( "pay" == hash[1]) {//mobile|submitSys
+								url = CHILD["mobile_pay"];
+								tab = "mobile_pay";
+							} else if(/iframe/.test(hash[1])) {
+								url = hash[2];
+								tab = "mobile_" + hash[1].split("_")[1];
+							} else if ('cpapply'== hash[1]) {
+								url = "http://o.app.qq.com/CPApplication/index.jsp?appid="+window.i;
+								tab = "mobile_baseInfo";
+							} else if ('bita'==hash[1]) {
+								var urls = {
+									'center': 'http://qzs.qq.com/open/operate/mobile/bita/center.htm',
+									'test': "http://op.open.qq.com/index.php?mod=tap_bitatest&act=page&appid=" + window.i,
+									'comments': 'http://op.open.qq.com/index.php?mod=tap_bitatest&act=appcomment_page&appid='+window.i,
+									'bugly': 'http://bugly.qq.com/bugly4open?app='+ window.i +'&pid=1'
+								};
+								url = urls[hash[2]] || urls['test'];
+								tab = "mobile_bita_"+(hash[2]||'test');
+							} else {
+								var platform = /(Ios)$/.test(hash[1])?13:201;//默认是android
+								//去掉android ios
+								hash[1] = hash[1].replace(/(Android|Ios)$/,"");
+								url = "http://op.open.qq.com/index.php?"+ OPTREE.mobile[hash[1]] +"&appid="+ window.i +"&pf="+ platform +"&!#" + hash.slice(1).join('|');
+								if(/mta|/.test(hash[1])){
+									tab = "mobile_"+hash[1];
+								}else{
+									tab = "mobile_baseInfo";
+								}
+							}
+							return {url:url, tab:tab};
+						}
+						(function(){
+							var _tab_str = [], _tmp, _tmpStr;
+							//平台菜单
+							for( var p in OP_INDEX_TAB ){
+								_tmp = OP_INDEX_TAB[p];
+								if( _tmp.sub ){
+									_tmp.show = false;
+									_tmp.cur = false;
+									for( var pSub in _tmp.sub ){
+										_tmp.sub[pSub].show && (_tmp.show = true);
+										_tmp.sub[pSub].cur && (_tmp.cur = true);
+									}
+								}
+								if( _tmp.show ){
+									if( _tmp.sub ){
+										_tab_str.push( '<li'+(_tmp.cur?' class="current"':'') + '><a href="javascript:void(0);" onclick="return false;" class="dropdown-toggle" _hassub="'+p+'" _hot_tag="'+_tmp.ht+'">'+_tmp.name+' <b class="arrow_down"></b></a> <ul class="dropdown-menu" role="menu">' );
+										for( var menu in _tmp.sub ){
+											_tmpStr = '<li'+(_tmp.sub[menu].cur?' class="current"':'') + '><a href="javascript:void(0);" onclick="return false;" _menu_id="'+p+'"'+(_tmp.sub[menu].dis?' class="disable"':'')+' _hot_tag="'+_tmp.sub[menu].ht+'" _action="'+_tmp.sub[menu].ac+'">'+_tmp.sub[menu].name+'</a></li>';
+											_tab_str.push(_tmpStr);
+											//默认展开的二级菜单
+											if( _tmp.cur ){
+												__subMenu.push(_tmpStr);
+											}
+										}
+										_tab_str.push( '</ul></li>' );
+									}else{
+										_tab_str.push( '<li'+(_tmp.cur?' class="current"':'') + '><a href="javascript:void(0);" onclick="return false;"'+(_tmp.dis?' class="disable"':'')+' _hot_tag="'+_tmp.ht+'" _action="'+_tmp.ac+'">'+_tmp.name+'</a></li>' );
+									}
+								}
+							}
+							document.write( _tab_str.join("") );
+
+							//添加iframe标记
+							for( var _t in CHILD ){
+								if(CHILD[_t].indexOf('op.open.qq.com') != -1) CHILD[_t] += ( 0 <= CHILD[_t].indexOf("?") )?"&inframe=1":"?inframe=1";
+							}
+							for( var _t in OPTREE ){
+								for( var _st in OPTREE[_t] ){
+									OPTREE[_t][_st] += "&inframe=1";
+								}
+							}
+						})();
+					</script>
+				</ul>
+				<ul class="top_menu" id="nav_mobile" style="display: none">
+					<script>
+//						if( !t && __hash_tab[0] == "tap" ){
+//							t = t || __hash_tab[1];
+//						}
+						//移动端菜单
+						//OP_INDEX_TAP_TAB = {
+						OP_INDEX_MOBILE_TAB = {
+							appManage : {
+								name : "应用能力列表",
+								ht : "OP.OPEN.APPMANAGEMENT.MOBILE",
+								sub : {
+									center : { ht : "OP.OPEN.HOME", ac : "mobile_center", name : "应用总览", cur : ( !h || "mobile|center" == h || "center" == h) ,  show : 10, dis : 0 },
+									main : { ht : "OP.OPEN.BASICINFO", ac : "mobile_baseInfo", name : "应用信息管理", cur : (/(baseInfo|iconInfo|apkInfo|platformInfo|agreementInfo|baseAbility|advancedAbility|relationAbility|debut|microDownload|tapUpdate|systemAbility|swapFlow)/.test(h)) , show : 10, dis : 0 }
+								}
+							},
+							data : { ht : "OP.OPEN.REPORT", ac : "mobile_mta", name : "业务数据", cur : ("mobile|mta" == h || "iframe_mta" == __hash_tab[1]) , show :1, dis :0 },
+							pay : { ht : "OP.OPEN.CPAY", ac : "mobile_pay", name : "支付结算", cur : ("mobile|pay" == h) , show:1, dis:!G_Data['allowMobilePay']},
+							platformSupport : {
+								name : "平台支持",
+								ht : "OP.OPEN.PLATFORMSUPPORT",
+								sub : {
+									submitSys : { ht : "OP.OPEN.SUBMIT", ac : "mobile_submitSys", name : "需求系统", cur :(h.indexOf("mobile|submitSys")==0) ,  show : 10, dis : 0 }
+								}
+							},
+							bita : {
+								ht:"OP.OPEN.BITA",
+								ac:"mobile_bita",
+								name:"宝贝实验室",
+								show:1, dis:0,
+								sub: {
+									center: { ht:"OP.OPEN.BITA.CENTER", ac:"mobile_bita_center", name:"总览", cur:h=='mobile|bita|center', show:1, dis:0 },
+									test: { ht:"OP.OPEN.BITA.TEST", ac:"mobile_bita_test", name:"真机测试", cur:h=='mobile|bita|test', show:1, dis:0 },
+									comments: { ht:"OP.OPEN.BITA.COMMENTS", ac:"mobile_bita_comments", name:"互动评论", cur:h=='mobile|bita|comments', show:1, dis:0 },
+									bugly: { ht:"OP.OPEN.BITA.BUGLY", ac:"mobile_bita_bugly", name:"崩溃监控", cur:h=='mobile|bita|bugly', show:1, dis:0 }
+								}
+							}
+						};
+						(function(){
+							var _tab_str = [], _tmp, _tmpStr;
+							for( var p in OP_INDEX_MOBILE_TAB ){
+								_tmp = OP_INDEX_MOBILE_TAB[p];
+								if( _tmp.sub ){
+									_tmp.show = false;
+									_tmp.cur = false;
+									for( var pSub in _tmp.sub ){
+										_tmp.sub[pSub].show && (_tmp.show = true);
+										_tmp.sub[pSub].cur && (_tmp.cur = true);
+									}
+								}
+								if( _tmp.show ){
+									if( _tmp.sub ){
+										_tab_str.push( '<li'+(_tmp.cur?' class="current"':'') + '><a href="javascript:void(0);" onclick="return false;" class="dropdown-toggle" _hassub="'+p+'" _hot_tag="'+_tmp.ht+'">'+_tmp.name+' <b class="arrow_down"></b></a> <ul class="dropdown-menu" role="menu">' );
+										for( var menu in _tmp.sub ){
+											_tmpStr = '<li'+(_tmp.sub[menu].cur?' class="current"':'') + '><a href="javascript:void(0);" onclick="return false;" _menu_id="'+p+'"'+(_tmp.sub[menu].dis?' class="disable"':'')+' _hot_tag="'+_tmp.sub[menu].ht+'" _action="'+_tmp.sub[menu].ac+'">'+_tmp.sub[menu].name+'</a></li>';
+											_tab_str.push(_tmpStr);
+											//默认展开的二级菜单
+											if( _tmp.cur ){
+												__mobile_subMenu.push(_tmpStr);
+											}
+										}
+										_tab_str.push( '</ul></li>' );
+									}else{
+										_tab_str.push( '<li'+(_tmp.cur?' class="current"':'') + '><a href="javascript:void(0);" onclick="return false;"'+(_tmp.dis?' class="disable"':'')+' _hot_tag="'+_tmp.ht+'" _action="'+_tmp.ac+'">'+_tmp.name+'</a></li>' );
+									}
+								}
+							}
+							document.write( _tab_str.join("") );
+						})();
+					</script>
+				</ul>
+				<div class="login_status">
+					<span><img class="app_icon" src="http://i.gtimg.cn/open/app_icon/00/68/88/53//100688853_16.png" onerror="(function(el){setTimeout(function(){el.src='http://qzonestyle.gtimg.cn/qzonestyle/act/qzone_app_bg/default_100.jpg'},20);})(this);this.onerror=null;"></span>
+					<span class="app_name textoverflow">城防三国</span>
+					<span class="sep">|</span>
+					<i class="ico_back"></i>
+					<a href="http://op.open.qq.com/index.php?mod=manage_center&owner=2383913068&uin=1492947504">返回管理中心</a>
+			  	</div>
+			</div>
+			<script>
+				if( __subMenu.length ){
+					document.write([
+						'<div id="div_sub">'
+							,'<ul class="sub_menu">'
+								,__subMenu.join("")
+							,'</ul>'
+						,'</div>'
+					].join(""));
+				}else{
+					document.write('<div id="div_sub" style="display:none;"></div>');
+				}
+				if( __mobile_subMenu.length ){
+					document.write([
+						'<div id="div_sub_mobile" style="display:none;">'
+						,'<ul class="sub_menu">'
+						,__mobile_subMenu.join("")
+						,'</ul>'
+						,'</div>'
+					].join(""));
+				}else{
+					document.write('<div id="div_sub_mobile" style="display:none;"></div>');
+				}
+			</script>
+		</div>
+		<div class="mod_frame" id="mod_frame">
+			<script>
+				if( !t ){
+					document.write('<iframe id="frame" name="frame" src="http://op.open.qq.com/index.php?mod=appinfo&act=apppreview&appid='+i+'" scrolling="no" frameborder="0" style="width:1000px;height:700px;"></iframe>');
+				}else if ( t== 'fcm' ||  CHILD[t] || "mobile" == __hash_tab[0]) {
+					var url = /(?:\?|&)url=(http:\/\/[^\/]+\.qq\.com\/.*)(?:&|$)/.exec(decodeURIComponent(location.search));
+					url = url ? url[1] : CHILD[t];
+//					console.debug(t,__hash_tab);
+					if(addr == "serv"){
+						url = getUrlp("serv_url") ? decodeURIComponent( getUrlp("serv_url") ) : (function (){
+							if(CHILD["managed"]){
+								return CHILD["managed"];
+							}else{
+								alert('您没有权限访问该页面');
+								return "about:blank";
+							}
+						})();
+					}
+					if( "main" == t && __hash_tab[1] && OPTREE.main[__hash_tab[1]] ){
+						url = "http://op.open.qq.com/index.php?"+OPTREE.main[__hash_tab[1]]+"&owner="+o+"&appid="+i+"&!#"+__hash_tab.slice(2).join("|");
+					}
+					if("mobile" == t || "mobile" == __hash_tab[0]){//移动端页面
+						//在mta.js异步调接口返回url再渲染
+						if(window.curHash() == 'mobile|mta'){
+							url = 'about:blank';
+						}else{
+							url = getMobilePageCfg(window.curHash()).url;
+						}
+					}
+					if( "submitSys" == t && __hash_tab[1] && OPTREE.submitSys[__hash_tab[1]] ){
+						url = getSubmitSysUrl(h);
+					}
+					if( "fcm" == t){
+						url = "http://op.open.qq.com/index.php?mod=appinfo&act=fcm&owner="+o+"&appid="+i+"&!#"+__hash_tab.slice(2).join("|");
+					}
+					document.write('<iframe id="frame" name="frame" src="' + url + '" scrolling="no" frameborder="0" style="width:1000px;height:700px;"></iframe>');
+				} else {
+					document.write('<iframe id="frame" name="frame" src="about:blank" scrolling="no" frameborder="0" style="width:1000px;height:700px;"></iframe>');
+					alert('您没有权限访问该页面');
+				}
+
+				if(/mobile/.test(h)){
+					document.getElementById("nav_plat").style.display = "none";
+					document.getElementById("div_sub").style.display = "none";
+					document.getElementById("nav_mobile").style.display = "";
+					document.getElementById("div_sub_mobile").style.display = "";
+				}else{
+					document.getElementById("nav_plat").style.display = "";
+					document.getElementById("div_sub").style.display = "";
+					document.getElementById("nav_mobile").style.display = "none";
+					document.getElementById("div_sub_mobile").style.display = "none";
+				}
+			</script>
+		</div>
+		<!-- main 结束 -->
+	</div>
+</div>
+<div class="foot">
+		<div class="inner">
+			<div class="footer_menu">
+				<a href="http://wiki.open.qq.com/wiki/%E8%85%BE%E8%AE%AF%E7%A4%BE%E5%8C%BA%E5%BC%80%E6%94%BE%E5%B9%B3%E5%8F%B0%E6%9C%8D%E5%8A%A1%E5%9B%A2%E9%98%9F" target="_blank">联系我们</a> | <a href="http://wiki.open.qq.com/wiki/%E6%8A%95%E8%AF%89%E6%8C%87%E5%BC%95" target="_blank">投诉举报</a> | <a href="http://open.qq.com" target="_blank">腾讯开放平台</a>
+			</div>
+			<p class="en">Copyright &copy; 1998 - 2015 Tencent. All Rights Reserved.</p>
+			<p>腾讯公司 版权所有</p>
+		</div>
+	</div>
+</div>
+<script>
+var mmConf = { 'base': 'http://qzonestyle.gtimg.cn/' };
+document.write('<script src="http://qzonestyle.gtimg.cn/open/operate/mlib/module.js"><\/script>');
+document.write('<script src="http://qzonestyle.gtimg.cn/ac/qzfl/release/qzfl_for_qzone.js"><\/script>');
+document.write('<script src="http://qzonestyle.gtimg.cn/ac/qzfl/stat.js"><\/script>');
+</script>
+<script>
+module.use('/open/operate/common/management-header', function(header){ header.init(); });
+module.use('/open/operate/console/index', function(index){ index.init(); });
+
+// qcloud用的，跨域页面高度自适应
+module.use([
+	"/open/operate/cloud/xMsg-interface",
+	"/open/operate/mlib/widget/x-msg"
+], function(x) {
+	// 高度自适应
+	x.init(document.getElementById('frame'));
+});
+module.use("/open/operate/mobile/mta/mta", function(module) {
+	module.init();
+});
+</script>
+</body>
+</html>

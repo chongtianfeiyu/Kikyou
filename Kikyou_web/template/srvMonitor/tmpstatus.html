@@ -1,0 +1,62 @@
+﻿{% extends "base.html" %}
+{% block content %}
+<!--  -->
+{% if tmpstatus %}
+
+
+<div class="bs-example">
+    <table class="table">
+      <thead>
+        <tr class="success">
+          <th>ip地址</th>
+          <th>cpu-5</th>
+          <th>cpu-10</th>
+          <th>cpu-15</th>
+          <th>内存占用</th>
+          <th>tcp连接数</th>
+          <th>进网流量bytes/s</th>
+          <th>出网流量bytes/s</th>
+          <th>/使用%</th>
+          <th>/data试用%</th>
+          <th>/node使用%</th>
+          <th>/data node使用%</th>
+          <th>报警级别</th>
+          <th>服务器状态</th>
+          <th>时间戳</th>
+        </tr>
+      </thead>
+      <tbody>
+	  {% for item in tmpstatus %}
+
+        <tr class="
+			{% ifnotequal item.alert_level 0 %}
+				{{ "danger" }}
+			{% endifnotequal %}		
+		">
+          <td>{{ item.ipaddr }}</td>
+          <td>{{ item.cpu_load5 }}</td>
+          <td>{{ item.cpu_load10 }}</td>
+          <td>{{ item.cpu_load15 }}</td>
+          <td>{{ item.mem_used }}</td>
+          <td>{{ item.tcp_estab }}</td>
+          <td>{{ item.eth_in }}</td>
+          <td>{{ item.eth_out }}</td>
+          <td>{{ item.disk_used_root }}</td>
+          <td>{{ item.disk_used_data }}</td>
+          <td>{{ item.inode_used_root }}</td>
+          <td>{{ item.inode_used_data }}</td>
+          <td>{{ item.alert_level }}</td>
+          <td>{{ item.srv_status }}</td>
+          <td>{{ item.ts|date:"Y-m-d H:i:s"}}</td>
+        </tr>
+	  {% endfor %}
+      </tbody>
+    </table>
+  </div>
+
+{% else %}
+	<p> There is no data <p/>
+ 
+{% endif %}
+  
+{% endblock %}

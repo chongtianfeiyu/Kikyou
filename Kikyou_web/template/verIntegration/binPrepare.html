@@ -1,0 +1,37 @@
+{% extends "verIntegration/versionTmp.html" %}
+
+{% block version_content %}
+<form action="/binprepare/" onSubmit="return validate_form(this)" method="get" >
+<table border="1" width="720">
+	<tr>
+		<td align="center" bgcolor="#CCCC33">step2:选择bin</td>
+		<td bgcolor="#CCCC33">请先确认从浏览器导出相应的bin文件，并提交svn，再选择需要发布的bin和zh_cn</td>
+	</tr>
+	<tr>
+		<td width="30%" align="center" valign="middle" >选择ini.xml中需要发布的bin</td>
+		<td width="70%" valign="middle" >
+			<input type="checkbox" name="bin_list" value="all.bin.new" />all.bin<br />
+			<input type="checkbox" name="bin_list" value="test.bin.new" />test.bin<br />
+		</td>
+	</tr>	
+	<tr>
+		<td align="center" >选择是否要发布zh-cn</td>
+		<td valign="middle" ><input type="checkbox" name="zh_cn_list" value="zh_cn.xml.new" />语言包</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td ><input type="submit" value="下一步" /></td>
+	</tr>
+</table>
+</form>
+<!--  下面部分打印上一步回显的数据，包括执行错误代码  -->
+{% if errorlist %}
+<font color="#FF0000">上一步执行错误信息：</font><br />
+<font color="#FF3300" >
+	{% for error in errorlist %}
+    	{{ error }}<br>
+    {% endfor %}
+</font>
+{% endif %}
+
+{% endblock %}

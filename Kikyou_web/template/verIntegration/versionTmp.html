@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div>
+	<table width="900" align="center" border="1">
+		<tr>
+			<td width="20%" valign="top" bgcolor="#FFFFCC" abbr="3">
+				<menu>
+                <li>
+                	<div align="left" ><strong> 
+                    {% if gameName %}
+                    	{{ gameName }}
+                    {% endif %}
+                    </strong></div>
+                </li>
+			    <li>
+			      <div align="left"><a href="/versionstart/">UI准备</a></div>
+			    </li>
+			    <li>
+			      <div align="left">选择bin</div>
+			    </li>
+			    <li>
+			      <div align="left"> 上传cdn <a href="/uploadcdn/">  </a></div>
+			    </li>
+			    <li>
+			      <div align="left"><a href="/uploadpng/?gameName="> 上传图片 </a></div>
+			    </li>
+		    </menu>			</td>
+			<td width="80%"  bgcolor="#CCCCCC">
+				{% block version_content %}
+                {% endblock %} 
+			</td>
+		</tr>
+	</table>
+</div>
+
+{% endblock %}
